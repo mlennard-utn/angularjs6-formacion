@@ -13,11 +13,11 @@ export class PersonaComponent implements OnInit {
   public persona: any;
 
   constructor(private http: HttpClient) {
-    // this.http.get('http://localhost:8080/greeting').subscribe((data: any) => {
-    //  console.log(data);
-    //  this.persona = data;
-    // });
-    this.getContent();
+     this.http.get('http://localhost:8080/greeting').subscribe((data: any) => {
+      console.log(data);
+      this.persona = data;
+     });
+    // this.getContent();
   }
 
   getContent(): any {
